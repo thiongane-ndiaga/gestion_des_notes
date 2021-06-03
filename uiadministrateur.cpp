@@ -14,19 +14,19 @@ UIAdministrateur::UIAdministrateur(QObject *controller)
 {
     ui->setupUi(this);
 
-    connect(ui->pushButtonValider, SIGNAL(clicked()),
+    connect(ui->pushButtonConfirm, SIGNAL(clicked()),
             controller, SLOT(onUIAdministrateurValiderClicked()));
 }
 
 bool UIAdministrateur::getInputs(int* identifiant, QString &login, QString &password, QString &type, bool* operation)
 {
-    if (ui->lineEditId->text().compare("") != 0)
-        *identifiant = ui->lineEditId->text().toInt();
+    if (ui->lineEditId_3->text().compare("") != 0)
+        *identifiant = ui->lineEditId_3->text().toInt();
 
-    login = ui->lineEditUsername->text();
-    password = ui->lineEditPassword->text();
-    type = ui->comboBoxRole->itemText(0);
-    *operation = ui->radioButtonCreer->isChecked(); // true si creation ...
+    login = ui->lineEditUsername_3->text();
+    password = ui->lineEditPassword_3->text();
+    type = ui->comboBoxRole_3->itemText(0);
+    *operation = ui->radioButtonCreate->isChecked(); // true si creation ...
 
     return true;
 }
