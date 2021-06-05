@@ -15,6 +15,7 @@ SOURCES += \
     service.cpp \
     uiadministrateur.cpp \
     uiauthentification.cpp \
+    uietudiant.cpp \
     uiformateur.cpp \
     user.cpp \
     usermodel.cpp
@@ -25,6 +26,7 @@ HEADERS += \
     service.hpp \
     uiadministrateur.hpp \
     uiauthentification.hpp \
+    uietudiant.hpp \
     uiformateur.hpp \
     user.hpp \
     usermodel.hpp
@@ -32,6 +34,7 @@ HEADERS += \
 FORMS += \
     uiadministrateur.ui \
     uiauthentification.ui \
+    uietudiant.ui \
     uiformateur.ui
 
 # Default rules for deployment.

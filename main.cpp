@@ -1,11 +1,14 @@
 #include "uiauthentification.hpp"
-
+#include "flowcontroller.hpp"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    UIAuthentification w;
-    w.show();
+
+    FlowController controller;
+    controller.exec();
+    //UIAuthentification w;
+    //w.show();
     return a.exec();
 }

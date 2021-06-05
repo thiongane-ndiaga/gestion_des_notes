@@ -24,9 +24,9 @@ DBAccess::DBAccess()
      * Créer une base de données SQLITE avec "DB browser for SQLite"
      */
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("users.db");
+    db.setDatabaseName("C:/Programme C++/gestion-des-notes/gestion_notes.db");
 
-    qDebug() << "DBAccess Object created and 'users.db' has been added as default database!";
+    qDebug() << "DBAccess Object created and 'gestion_notes.db' has been added as default database!";
 }
 
 bool DBAccess::open()
