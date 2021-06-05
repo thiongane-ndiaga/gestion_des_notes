@@ -17,6 +17,7 @@ SOURCES += \
     uiauthentification.cpp \
     uietudiant.cpp \
     uiformateur.cpp \
+    uiresponsable.cpp \
     user.cpp \
     usermodel.cpp
 
@@ -28,14 +29,20 @@ HEADERS += \
     uiauthentification.hpp \
     uietudiant.hpp \
     uiformateur.hpp \
+    uiresponsable.hpp \
     user.hpp \
     usermodel.hpp
 
 FORMS += \
     uiadministrateur.ui \
     uiauthentification.ui \
+<<<<<<< HEAD
     uietudiant.ui \
     uiformateur.ui
+=======
+    uiformateur.ui \
+    uiresponsable.ui
+>>>>>>> f91e12f30cfc88b8a97f8ded4346fb439c498121
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

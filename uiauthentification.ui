@@ -257,6 +257,22 @@ color: rgba(150, 2, 0, 1);
        </property>
       </widget>
      </item>
+     <item>
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>21</width>
+         <height>13</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
     </layout>
    </widget>
   </widget>
@@ -266,7 +282,7 @@ color: rgba(150, 2, 0, 1);
      <x>0</x>
      <y>0</y>
      <width>480</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

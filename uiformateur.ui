@@ -22,249 +22,283 @@
     <height>540</height>
    </size>
   </property>
+  <property name="font">
+   <font>
+    <family>Tahoma</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="horizontalLayoutWidget_4">
-    <property name="geometry">
-     <rect>
-      <x>1</x>
-      <y>411</y>
-      <width>221</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
-     <item>
-      <widget class="QLabel" name="labelUtilisateurConnecteTitre">
-       <property name="text">
-        <string>Utilisateur Connecté :</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="labelUtilisateurConnecte">
-       <property name="text">
-        <string>&lt;dynamic&gt;</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>-1</x>
       <y>0</y>
-      <width>641</width>
-      <height>361</height>
+      <width>961</width>
+      <height>471</height>
      </rect>
     </property>
-    <property name="currentIndex">
-     <number>1</number>
+    <property name="font">
+     <font>
+      <family>Tahoma</family>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
-    <widget class="QWidget" name="tabProfil">
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tabProfile">
      <attribute name="title">
-      <string>Profil - Modules</string>
+      <string>Profile</string>
      </attribute>
-     <widget class="QWidget" name="formLayoutWidget">
+     <widget class="QWidget" name="horizontalLayoutWidget_5">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>30</y>
-        <width>291</width>
-        <height>131</height>
+        <x>-1</x>
+        <y>40</y>
+        <width>961</width>
+        <height>161</height>
        </rect>
       </property>
-      <layout class="QFormLayout" name="formLayoutProfil">
-       <item row="0" column="0">
-        <widget class="QLabel" name="labelId">
-         <property name="text">
-          <string>Id :</string>
+      <layout class="QHBoxLayout" name="horizontalLayout_14">
+       <item>
+        <spacer name="horizontalSpacer_7">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEditId">
-         <property name="enabled">
-          <bool>false</bool>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
          </property>
-        </widget>
+        </spacer>
        </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="labelUsername">
-         <property name="text">
-          <string>Username :</string>
+       <item>
+        <layout class="QFormLayout" name="formLayout_7">
+         <item row="0" column="0">
+          <widget class="QLabel" name="labelId_7">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Id :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEditId_7">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="labelUsername_7">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Username :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEditUsername_7">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="labelEmail_5">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Email :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEditEmail_5">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="labelPassword_7">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Password :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="lineEditPassword_7">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="labelConfirmPassword_7">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Confirm password :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="lineEditConfirmPassword_7">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_9">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="lineEditUsername"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="labelPassword">
-         <property name="text">
-          <string>Password :</string>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
          </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="lineEditPassword">
-         <property name="echoMode">
-          <enum>QLineEdit::Password</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="labelConfirmPassword">
-         <property name="text">
-          <string>Confirm password :</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QLineEdit" name="lineEditConfirmPassword">
-         <property name="echoMode">
-          <enum>QLineEdit::Password</enum>
-         </property>
-        </widget>
+        </spacer>
        </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="pushButtonModifier">
+     <widget class="QWidget" name="horizontalLayoutWidget_6">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>160</y>
-        <width>113</width>
+        <y>200</y>
+        <width>961</width>
         <height>32</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Modifier</string>
-      </property>
-     </widget>
-     <widget class="QTableView" name="tableViewModules">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>60</y>
-        <width>311</width>
-        <height>271</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelProfil">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>10</y>
-        <width>81</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-        <underline>true</underline>
-       </font>
-      </property>
-      <property name="text">
-       <string>Mon profil</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelModules">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>10</y>
-        <width>101</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-        <underline>true</underline>
-       </font>
-      </property>
-      <property name="text">
-       <string>Mes modules</string>
-      </property>
-     </widget>
-     <widget class="Line" name="line_3">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>10</y>
-        <width>20</width>
-        <height>321</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-     </widget>
-     <widget class="QWidget" name="formLayoutWidget_2">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>20</y>
-        <width>221</width>
-        <height>38</height>
-       </rect>
-      </property>
-      <layout class="QFormLayout" name="formLayoutClasse">
-       <item row="1" column="1">
-        <widget class="QComboBox" name="comboBoxClasse"/>
+      <layout class="QHBoxLayout" name="horizontalLayout_15">
+       <item>
+        <spacer name="horizontalSpacer_11">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="labelClasse">
+       <item>
+        <widget class="QPushButton" name="pushButtonModifyProfile">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
-          <string>Classe :</string>
+          <string>Modify</string>
          </property>
         </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_10">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="tabEvaluations">
      <attribute name="title">
-      <string>Évaluations</string>
+      <string>Evaluations</string>
      </attribute>
-     <widget class="Line" name="line">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>290</y>
-        <width>631</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
      <widget class="QWidget" name="horizontalLayoutWidget_2">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>300</y>
-        <width>631</width>
+        <y>410</y>
+        <width>951</width>
         <height>32</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <layout class="QHBoxLayout" name="horizontalLayout_12">
        <item>
-        <spacer name="horizontalSpacer">
+        <spacer name="horizontalSpacer_6">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -277,147 +311,92 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButtonValider">
+        <widget class="QPushButton" name="pushButtonConfirm">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
-          <string>Valider</string>
+          <string>Confirm</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButtonLister">
+        <widget class="QPushButton" name="pushButtonList">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
-          <string>Lister</string>
+          <string>List</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButtonSupprimer">
+        <widget class="QPushButton" name="pushButtonDelete">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
-          <string>Supprimer</string>
+          <string>Delete</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButtonEffacer">
-         <property name="text">
-          <string>Effacer</string>
+        <widget class="QPushButton" name="pushButtonReset">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButtonExit">
          <property name="text">
-          <string>Exit</string>
+          <string>Reset</string>
          </property>
         </widget>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="formLayoutWidget_3">
+     <widget class="QTableView" name="tableViewStudents">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>335</x>
         <y>40</y>
-        <width>241</width>
-        <height>188</height>
+        <width>611</width>
+        <height>221</height>
        </rect>
       </property>
-      <layout class="QFormLayout" name="formLayout">
-       <item row="0" column="1">
-        <widget class="QRadioButton" name="radioButtonDevoir">
-         <property name="text">
-          <string>Devoir</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QGroupBox" name="groupBoxTypeEval">
-         <property name="font">
-          <font>
-           <pointsize>13</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="title">
-          <string>Type :</string>
-         </property>
-         <property name="checkable">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QRadioButton" name="radioButtonExamen">
-         <property name="text">
-          <string>Examen</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="labelClasseEval">
-         <property name="text">
-          <string>Classe :</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QComboBox" name="comboBoxClasseEval"/>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="labelModuleEval">
-         <property name="text">
-          <string>Module :</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QComboBox" name="comboBoxModuleEval"/>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="labelNoteEval">
-         <property name="text">
-          <string>Note :</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
-       </item>
-       <item row="5" column="0">
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>Bonus :</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="1">
-        <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
-       </item>
-      </layout>
+      <property name="font">
+       <font>
+        <family>Tahoma</family>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
      </widget>
      <widget class="QWidget" name="horizontalLayoutWidget_3">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>-1</x>
         <y>0</y>
-        <width>631</width>
+        <width>951</width>
         <height>38</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
        <item>
-        <widget class="QPushButton" name="pushButtonProfil">
-         <property name="toolTip">
-          <string>Consulter mon profil ...</string>
-         </property>
-         <property name="text">
-          <string>Profil</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="horizontalSpacer_2">
+        <spacer name="horizontalSpacer_5">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -430,14 +409,28 @@
         </spacer>
        </item>
        <item>
-        <widget class="QLabel" name="labelRechercher">
+        <widget class="QLabel" name="labelFindBy">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
-          <string>Rechercher un élève à partir de son</string>
+          <string>Find student by</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBoxRechercherPar">
+        <widget class="QComboBox" name="comboBoxFindBy">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
          <property name="currentIndex">
           <number>0</number>
          </property>
@@ -454,25 +447,126 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEditRechercher"/>
+        <widget class="QLineEdit" name="lineEditSearch">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+        </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButtonRechercher">
+        <widget class="QPushButton" name="pushButtonSearch">
          <property name="text">
-          <string>Rechercher</string>
+          <string>Search</string>
          </property>
         </widget>
        </item>
       </layout>
      </widget>
-     <widget class="QTableView" name="tableViewEtudiantsEvaluations">
+     <widget class="QWidget" name="formLayoutWidget">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>0</x>
         <y>40</y>
-        <width>381</width>
-        <height>131</height>
+        <width>321</width>
+        <height>191</height>
        </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout_3">
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBoxType">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Type :</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QRadioButton" name="radioButtonExam">
+         <property name="text">
+          <string>Exam</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QRadioButton" name="radioButtonAssignment">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Assignment</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="labelClass">
+         <property name="text">
+          <string>Class :</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="comboBoxClass"/>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="comboBoxModule"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="labelModule">
+         <property name="text">
+          <string>Module :</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="labelGrade">
+         <property name="text">
+          <string>Grade :</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="labelBonus">
+         <property name="text">
+          <string>Bonus :</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QDoubleSpinBox" name="doubleSpinBoxGrade"/>
+       </item>
+       <item row="5" column="1">
+        <widget class="QDoubleSpinBox" name="doubleSpinBoxBonus"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>400</y>
+        <width>951</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
      <widget class="QWidget" name="horizontalLayoutWidget">
@@ -480,15 +574,35 @@
        <rect>
         <x>0</x>
         <y>230</y>
-        <width>241</width>
+        <width>321</width>
         <height>31</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
+      <layout class="QHBoxLayout" name="horizontalLayout_11">
        <item>
-        <widget class="QRadioButton" name="radioButtonCreer">
+        <spacer name="horizontalSpacer_8">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButtonCreate">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
-          <string>Creer</string>
+          <string>Create</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -496,38 +610,194 @@
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioButtonModifier">
+        <widget class="QRadioButton" name="radioButtonModify">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
-          <string>Modifier</string>
+          <string>Modify</string>
          </property>
         </widget>
        </item>
       </layout>
      </widget>
-     <widget class="QTableView" name="tableViewEval">
-      <property name="geometry">
-       <rect>
-        <x>250</x>
-        <y>180</y>
-        <width>381</width>
-        <height>111</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="Line" name="line_2">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>170</y>
-        <width>381</width>
-        <height>20</height>
+        <x>0</x>
+        <y>260</y>
+        <width>951</width>
+        <height>16</height>
        </rect>
       </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>279</y>
+        <width>951</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>325</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QTableView" name="tableViewStudents_2">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
+    <widget class="QWidget" name="tabModules">
+     <attribute name="title">
+      <string>Modules</string>
+     </attribute>
+     <widget class="QWidget" name="horizontalLayoutWidget_8">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>50</y>
+        <width>961</width>
+        <height>321</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>150</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QTableView" name="tableViewModules">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>150</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>470</y>
+      <width>221</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_9">
+     <item>
+      <widget class="QLabel" name="labelConnectedUserTitle">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Connected user :</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelConnectedUser">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>&lt;dynamic&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButtonExit_3">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>470</y>
+      <width>65</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tahoma</family>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Exit</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
