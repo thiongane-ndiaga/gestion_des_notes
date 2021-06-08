@@ -1,5 +1,6 @@
 #include "uiadministrateur.hpp"
 #include "ui_uiadministrateur.h"
+#include <QDebug>
 /* Try -> #include "ui_uiadministrateur.h" ; if -> #include "ui_UIAdministrateur.h" not work*/
 
 UIAdministrateur::UIAdministrateur(QWidget *parent) :
@@ -18,14 +19,18 @@ UIAdministrateur::UIAdministrateur(QObject *controller)
             controller, SLOT(onUIAdministrateurValiderClicked()));
 }
 
-bool UIAdministrateur::getInputs(int* identifiant, QString &login, QString &password, QString &type, bool* operation)
+bool UIAdministrateur::getInputs(int* identifiant, QString &login, QString &prenom, QString &nom, QString &password, QString &type, bool* operation)
 {
     if (ui->lineEditId_3->text().compare("") != 0)
         *identifiant = ui->lineEditId_3->text().toInt();
 
-    login = ui->lineEditUsername_3->text();
+    login = ui->lineEditLogin->text();
+    prenom = ui->lineEditFirstName->text();
+    nom = ui->lineEditLastName->text();
     password = ui->lineEditPassword_3->text();
-    type = ui->comboBoxRole_3->itemText(0);
+
+    type = ui->comboBoxRole_3->currentText();
+    qDebug() << "Type : "<< type ;
     *operation = ui->radioButtonCreate->isChecked(); // true si creation ...
 
     return true;

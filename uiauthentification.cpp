@@ -21,7 +21,7 @@ UIAuthentification::UIAuthentification(QObject *controller)
 
 bool UIAuthentification::getInputs (QString &login, QString &password)
 {
-    login = ui->lineEditUsername->text();
+    login = ui->lineEditLogin->text();
     password = ui->lineEditPassword->text();
 
     if (login.compare("") == 0 ||

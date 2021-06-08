@@ -12,6 +12,7 @@ UserModel::UserModel(DBAccess *dbAccess)
 
 void UserModel::create(User user)
 {
+    qDebug () << "Type : " << user.getType() << " woooy !";
     dbAccess->open();
 
     QSqlQuery query(dbAccess->database());

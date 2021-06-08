@@ -90,17 +90,20 @@ void FlowController::onUIAdministrateurValiderClicked()
 {
     int identifiant = -1;
     QString login;
+    QString prenom;
+    QString nom;
     QString password;
     QString type;
     bool operation;
 
-    bool statut = this->uiAdministrateur->getInputs(&identifiant, login, password, type, &operation);
+    bool statut = this->uiAdministrateur->getInputs(&identifiant, login, prenom, nom, password, type, &operation);
     if (statut == true)
     {
+         qDebug () << "Data recup successfully!";
         if (operation == true)
         {
             // Creation
-            User user ("", "", login, password);
+            User user (nom, prenom, login, password);
             user.setType(type);
 
             service->createUser(user);
