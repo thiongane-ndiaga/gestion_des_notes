@@ -77,7 +77,7 @@ color: rgb(255, 255, 255);</string>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="labelAuthentification">
        <property name="font">
         <font>
          <family>Tahoma</family>
@@ -90,7 +90,7 @@ color: rgb(255, 255, 255);</string>
         <string notr="true"/>
        </property>
        <property name="text">
-        <string>AUTHENTICATION</string>
+        <string>AUTHENTIFICATION</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -137,7 +137,7 @@ color: rgb(255, 255, 255);</string>
           </font>
          </property>
          <property name="text">
-          <string>Password :</string>
+          <string>Mot de passe :</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -191,7 +191,7 @@ color: rgb(255, 255, 255);
 </string>
          </property>
          <property name="text">
-          <string>Sign In</string>
+          <string>Se connecter</string>
          </property>
         </widget>
        </item>
@@ -262,7 +262,7 @@ color: rgb(255, 255, 255);
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButtonExit">
+      <widget class="QPushButton" name="pushButtonQuitter">
        <property name="font">
         <font>
          <family>Tahoma</family>
@@ -276,7 +276,7 @@ color: rgba(150, 2, 0, 1);
 </string>
        </property>
        <property name="text">
-        <string>EXIT</string>
+        <string>Quitter</string>
        </property>
       </widget>
      </item>
@@ -289,7 +289,7 @@ color: rgba(150, 2, 0, 1);
      <x>0</x>
      <y>0</y>
      <width>480</width>
-     <height>24</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

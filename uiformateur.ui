@@ -22,6 +22,11 @@
     <height>540</height>
    </size>
   </property>
+  <property name="font">
+   <font>
+    <family>Tahoma</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -30,7 +35,7 @@
     <property name="geometry">
      <rect>
       <x>1</x>
-      <y>411</y>
+      <y>470</y>
       <width>221</width>
       <height>21</height>
      </rect>
@@ -45,6 +50,13 @@
      </item>
      <item>
       <widget class="QLabel" name="labelUtilisateurConnecte">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
         <string>&lt;dynamic&gt;</string>
        </property>
@@ -57,181 +69,274 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>641</width>
-      <height>361</height>
+      <width>961</width>
+      <height>471</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tahoma</family>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="currentIndex">
      <number>1</number>
     </property>
     <widget class="QWidget" name="tabProfil">
      <attribute name="title">
-      <string>Profil - Modules</string>
+      <string>Profil</string>
      </attribute>
-     <widget class="QWidget" name="formLayoutWidget">
+     <widget class="QWidget" name="horizontalLayoutWidget_5">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>30</y>
-        <width>291</width>
-        <height>131</height>
+        <y>40</y>
+        <width>951</width>
+        <height>191</height>
        </rect>
       </property>
-      <layout class="QFormLayout" name="formLayoutProfil">
-       <item row="0" column="0">
-        <widget class="QLabel" name="labelId">
-         <property name="text">
-          <string>Id :</string>
+      <layout class="QHBoxLayout" name="horizontalLayout_14">
+       <item>
+        <spacer name="horizontalSpacer_7">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEditId">
-         <property name="enabled">
-          <bool>false</bool>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
          </property>
-        </widget>
+        </spacer>
        </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="labelUsername">
-         <property name="text">
-          <string>Username :</string>
+       <item>
+        <layout class="QFormLayout" name="formLayout_7">
+         <item row="0" column="0">
+          <widget class="QLabel" name="labelIdProfil">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Id :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEditIdProfil">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="labelLoginProfil">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Login :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEditLoginProfil">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="labelPrenomProfil">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Prénom :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEditPrenomProfil">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="labelPasswordProfil">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Mot de passe :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="lineEditPasswordProfil">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="labelConfirmPasswordProfil">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Confirmer mot de passe :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLineEdit" name="lineEditConfirmPasswordProfil">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="lineEditNomProfil">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="labelNomProfil">
+           <property name="font">
+            <font>
+             <family>Tahoma</family>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Nom :</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_9">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="lineEditUsername"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="labelPassword">
-         <property name="text">
-          <string>Password :</string>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
          </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="lineEditPassword">
-         <property name="echoMode">
-          <enum>QLineEdit::Password</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="labelConfirmPassword">
-         <property name="text">
-          <string>Confirm password :</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QLineEdit" name="lineEditConfirmPassword">
-         <property name="echoMode">
-          <enum>QLineEdit::Password</enum>
-         </property>
-        </widget>
+        </spacer>
        </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="pushButtonModifier">
+     <widget class="QWidget" name="horizontalLayoutWidget_6">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>160</y>
-        <width>113</width>
+        <y>230</y>
+        <width>951</width>
         <height>32</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Modifier</string>
-      </property>
-     </widget>
-     <widget class="QTableView" name="tableViewModules">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>60</y>
-        <width>311</width>
-        <height>271</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelProfil">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>10</y>
-        <width>81</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-        <underline>true</underline>
-       </font>
-      </property>
-      <property name="text">
-       <string>Mon profil</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelModules">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>10</y>
-        <width>101</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-        <underline>true</underline>
-       </font>
-      </property>
-      <property name="text">
-       <string>Mes modules</string>
-      </property>
-     </widget>
-     <widget class="Line" name="line_3">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>10</y>
-        <width>20</width>
-        <height>321</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-     </widget>
-     <widget class="QWidget" name="formLayoutWidget_2">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>20</y>
-        <width>221</width>
-        <height>38</height>
-       </rect>
-      </property>
-      <layout class="QFormLayout" name="formLayoutClasse">
-       <item row="1" column="1">
-        <widget class="QComboBox" name="comboBoxClasse"/>
+      <layout class="QHBoxLayout" name="horizontalLayout_15">
+       <item>
+        <spacer name="horizontalSpacer_11">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="labelClasse">
+       <item>
+        <widget class="QPushButton" name="pushButtonModifierProfil">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
-          <string>Classe :</string>
+          <string>Modifier</string>
          </property>
         </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_10">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>
@@ -244,8 +349,8 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>290</y>
-        <width>631</width>
+        <y>400</y>
+        <width>951</width>
         <height>20</height>
        </rect>
       </property>
@@ -257,8 +362,8 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>300</y>
-        <width>631</width>
+        <y>410</y>
+        <width>951</width>
         <height>32</height>
        </rect>
       </property>
@@ -278,6 +383,13 @@
        </item>
        <item>
         <widget class="QPushButton" name="pushButtonValider">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Valider</string>
          </property>
@@ -285,6 +397,13 @@
        </item>
        <item>
         <widget class="QPushButton" name="pushButtonLister">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Lister</string>
          </property>
@@ -292,6 +411,13 @@
        </item>
        <item>
         <widget class="QPushButton" name="pushButtonSupprimer">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Supprimer</string>
          </property>
@@ -299,15 +425,15 @@
        </item>
        <item>
         <widget class="QPushButton" name="pushButtonEffacer">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Effacer</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButtonExit">
-         <property name="text">
-          <string>Exit</string>
          </property>
         </widget>
        </item>
@@ -318,13 +444,20 @@
        <rect>
         <x>0</x>
         <y>40</y>
-        <width>241</width>
-        <height>188</height>
+        <width>271</width>
+        <height>231</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout">
        <item row="0" column="1">
         <widget class="QRadioButton" name="radioButtonDevoir">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Devoir</string>
          </property>
@@ -334,9 +467,10 @@
         <widget class="QGroupBox" name="groupBoxTypeEval">
          <property name="font">
           <font>
+           <family>Tahoma</family>
            <pointsize>13</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="title">
@@ -349,6 +483,13 @@
        </item>
        <item row="1" column="1">
         <widget class="QRadioButton" name="radioButtonExamen">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Examen</string>
          </property>
@@ -356,43 +497,103 @@
        </item>
        <item row="2" column="0">
         <widget class="QLabel" name="labelClasseEval">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Classe :</string>
          </property>
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QComboBox" name="comboBoxClasseEval"/>
+        <widget class="QComboBox" name="comboBoxClasseEval">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+        </widget>
        </item>
        <item row="3" column="0">
         <widget class="QLabel" name="labelModuleEval">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Module :</string>
          </property>
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QComboBox" name="comboBoxModuleEval"/>
+        <widget class="QComboBox" name="comboBoxModuleEval">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+        </widget>
        </item>
        <item row="4" column="0">
         <widget class="QLabel" name="labelNoteEval">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Note :</string>
          </property>
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+        </widget>
        </item>
        <item row="5" column="0">
         <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Bonus :</string>
          </property>
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -401,21 +602,11 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>631</width>
+        <width>951</width>
         <height>38</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <item>
-        <widget class="QPushButton" name="pushButtonProfil">
-         <property name="toolTip">
-          <string>Consulter mon profil ...</string>
-         </property>
-         <property name="text">
-          <string>Profil</string>
-         </property>
-        </widget>
-       </item>
        <item>
         <spacer name="horizontalSpacer_2">
          <property name="orientation">
@@ -431,6 +622,13 @@
        </item>
        <item>
         <widget class="QLabel" name="labelRechercher">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Rechercher un élève à partir de son</string>
          </property>
@@ -438,6 +636,13 @@
        </item>
        <item>
         <widget class="QComboBox" name="comboBoxRechercherPar">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
          <property name="currentIndex">
           <number>0</number>
          </property>
@@ -448,16 +653,31 @@
          </item>
          <item>
           <property name="text">
-           <string>Username</string>
+           <string>Nom</string>
           </property>
          </item>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEditRechercher"/>
+        <widget class="QLineEdit" name="lineEditRechercher">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QPushButton" name="pushButtonRechercher">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Rechercher</string>
          </property>
@@ -468,25 +688,39 @@
      <widget class="QTableView" name="tableViewEtudiantsEvaluations">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>280</x>
         <y>40</y>
-        <width>381</width>
-        <height>131</height>
+        <width>671</width>
+        <height>161</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Tahoma</family>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
       </property>
      </widget>
      <widget class="QWidget" name="horizontalLayoutWidget">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>230</y>
-        <width>241</width>
+        <y>270</y>
+        <width>271</width>
         <height>31</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QRadioButton" name="radioButtonCreer">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Creer</string>
          </property>
@@ -497,6 +731,13 @@
        </item>
        <item>
         <widget class="QRadioButton" name="radioButtonModifier">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
           <string>Modifier</string>
          </property>
@@ -507,19 +748,26 @@
      <widget class="QTableView" name="tableViewEval">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>180</y>
-        <width>381</width>
-        <height>111</height>
+        <x>280</x>
+        <y>220</y>
+        <width>671</width>
+        <height>181</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Tahoma</family>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
       </property>
      </widget>
      <widget class="Line" name="line_2">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>170</y>
-        <width>381</width>
+        <x>280</x>
+        <y>200</y>
+        <width>671</width>
         <height>20</height>
        </rect>
       </property>
@@ -528,6 +776,63 @@
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="tabModules">
+     <attribute name="title">
+      <string>Modules</string>
+     </attribute>
+     <widget class="QWidget" name="formLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>30</y>
+        <width>251</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelClasse">
+         <property name="text">
+          <string>Classe :</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="comboBoxClasse"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QTableView" name="tableView">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>30</y>
+        <width>691</width>
+        <height>401</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButtonQuitter">
+    <property name="geometry">
+     <rect>
+      <x>883</x>
+      <y>470</y>
+      <width>71</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tahoma</family>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Quitter</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

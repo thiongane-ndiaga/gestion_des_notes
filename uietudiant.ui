@@ -10,6 +10,11 @@
     <height>600</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Tahoma</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -19,13 +24,23 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>801</width>
+      <width>817</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tahoma</family>
+     </font>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QLabel" name="label_15">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+        </font>
+       </property>
        <property name="text">
         <string>Nom:</string>
        </property>
@@ -33,6 +48,11 @@
      </item>
      <item>
       <widget class="QLabel" name="label_16">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+        </font>
+       </property>
        <property name="text">
         <string>&lt;dynamic&gt;</string>
        </property>
@@ -40,6 +60,11 @@
      </item>
      <item>
       <spacer name="horizontalSpacer_5">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -56,6 +81,11 @@
      </item>
      <item>
       <widget class="QLabel" name="label_17">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+        </font>
+       </property>
        <property name="text">
         <string>Prenom:</string>
        </property>
@@ -63,6 +93,11 @@
      </item>
      <item>
       <widget class="QLabel" name="label_18">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+        </font>
+       </property>
        <property name="text">
         <string>&lt;dynamic&gt;</string>
        </property>
@@ -70,6 +105,11 @@
      </item>
      <item>
       <spacer name="horizontalSpacer_6">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -86,6 +126,11 @@
      </item>
      <item>
       <widget class="QLabel" name="label_19">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+        </font>
+       </property>
        <property name="text">
         <string>Classe: </string>
        </property>
@@ -93,6 +138,11 @@
      </item>
      <item>
       <widget class="QLabel" name="label_20">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+        </font>
+       </property>
        <property name="text">
         <string>&lt;dynamic&gt;</string>
        </property>
@@ -100,6 +150,11 @@
      </item>
      <item>
       <spacer name="horizontalSpacer_7">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -116,6 +171,11 @@
      </item>
      <item>
       <widget class="QLabel" name="label_21">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+        </font>
+       </property>
        <property name="text">
         <string>ID: </string>
        </property>
@@ -123,6 +183,11 @@
      </item>
      <item>
       <widget class="QLabel" name="label_22">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+        </font>
+       </property>
        <property name="text">
         <string>&lt;dynamic&gt;</string>
        </property>
@@ -130,6 +195,11 @@
      </item>
      <item>
       <spacer name="horizontalSpacer_8">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -152,14 +222,24 @@
       <height>431</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Tahoma</family>
+     </font>
+    </property>
     <layout class="QGridLayout" name="gridLayout_2">
      <item row="0" column="0">
       <widget class="QTabWidget" name="tabWidget_2">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+        </font>
+       </property>
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="tab_profil_2">
         <attribute name="title">
@@ -831,7 +911,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

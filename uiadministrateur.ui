@@ -52,16 +52,16 @@
     <property name="currentIndex">
      <number>1</number>
     </property>
-    <widget class="QWidget" name="tabProfile">
+    <widget class="QWidget" name="tabProfil">
      <attribute name="title">
-      <string>Profile</string>
+      <string>Profil</string>
      </attribute>
      <widget class="QWidget" name="horizontalLayoutWidget_5">
       <property name="geometry">
        <rect>
-        <x>-1</x>
+        <x>0</x>
         <y>40</y>
-        <width>961</width>
+        <width>951</width>
         <height>191</height>
        </rect>
       </property>
@@ -73,7 +73,7 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>40</width>
+           <width>30</width>
            <height>20</height>
           </size>
          </property>
@@ -82,7 +82,7 @@
        <item>
         <layout class="QFormLayout" name="formLayout_7">
          <item row="0" column="0">
-          <widget class="QLabel" name="labelIdProfile">
+          <widget class="QLabel" name="labelIdProfil">
            <property name="font">
             <font>
              <family>Tahoma</family>
@@ -96,7 +96,7 @@
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEditIdProfile">
+          <widget class="QLineEdit" name="lineEditIdProfil">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -110,7 +110,7 @@
           </widget>
          </item>
          <item row="1" column="0">
-          <widget class="QLabel" name="labelLoginProfile">
+          <widget class="QLabel" name="labelLoginProfil">
            <property name="font">
             <font>
              <family>Tahoma</family>
@@ -124,7 +124,7 @@
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="lineEditLoginProfile">
+          <widget class="QLineEdit" name="lineEditLoginProfil">
            <property name="font">
             <font>
              <family>Tahoma</family>
@@ -135,7 +135,7 @@
           </widget>
          </item>
          <item row="2" column="0">
-          <widget class="QLabel" name="labelFirstNameProfile">
+          <widget class="QLabel" name="labelPrenomProfil">
            <property name="font">
             <font>
              <family>Tahoma</family>
@@ -144,12 +144,12 @@
             </font>
            </property>
            <property name="text">
-            <string>First name :</string>
+            <string>Prénom :</string>
            </property>
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QLineEdit" name="lineEditFirstNameProfile">
+          <widget class="QLineEdit" name="lineEditPrenomProfil">
            <property name="font">
             <font>
              <family>Tahoma</family>
@@ -160,7 +160,7 @@
           </widget>
          </item>
          <item row="4" column="0">
-          <widget class="QLabel" name="labelPasswordProfile">
+          <widget class="QLabel" name="labelPasswordProfil">
            <property name="font">
             <font>
              <family>Tahoma</family>
@@ -169,12 +169,12 @@
             </font>
            </property>
            <property name="text">
-            <string>Password :</string>
+            <string>Mot de passe :</string>
            </property>
           </widget>
          </item>
          <item row="4" column="1">
-          <widget class="QLineEdit" name="lineEditPasswordProfile">
+          <widget class="QLineEdit" name="lineEditPasswordProfil">
            <property name="font">
             <font>
              <family>Tahoma</family>
@@ -188,7 +188,7 @@
           </widget>
          </item>
          <item row="5" column="0">
-          <widget class="QLabel" name="labelConfirmPasswordProfile">
+          <widget class="QLabel" name="labelConfirmPasswordProfil">
            <property name="font">
             <font>
              <family>Tahoma</family>
@@ -197,12 +197,12 @@
             </font>
            </property>
            <property name="text">
-            <string>Confirm password :</string>
+            <string>Confirmer mot de passe :</string>
            </property>
           </widget>
          </item>
          <item row="5" column="1">
-          <widget class="QLineEdit" name="lineEditConfirmPasswordProfile">
+          <widget class="QLineEdit" name="lineEditConfirmPasswordProfil">
            <property name="font">
             <font>
              <family>Tahoma</family>
@@ -216,7 +216,7 @@
           </widget>
          </item>
          <item row="3" column="1">
-          <widget class="QLineEdit" name="lineEditLastNameProfile">
+          <widget class="QLineEdit" name="lineEditNomProfil">
            <property name="font">
             <font>
              <family>Tahoma</family>
@@ -227,7 +227,7 @@
           </widget>
          </item>
          <item row="3" column="0">
-          <widget class="QLabel" name="labelLastNameProfile">
+          <widget class="QLabel" name="labelNomProfil">
            <property name="font">
             <font>
              <family>Tahoma</family>
@@ -236,7 +236,7 @@
             </font>
            </property>
            <property name="text">
-            <string>Last name :</string>
+            <string>Nom :</string>
            </property>
           </widget>
          </item>
@@ -249,7 +249,7 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>40</width>
+           <width>30</width>
            <height>20</height>
           </size>
          </property>
@@ -262,7 +262,7 @@
        <rect>
         <x>0</x>
         <y>230</y>
-        <width>961</width>
+        <width>951</width>
         <height>32</height>
        </rect>
       </property>
@@ -281,7 +281,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButtonModifyProfile">
+        <widget class="QPushButton" name="pushButtonModifierProfil">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -290,7 +290,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Modify</string>
+          <string>Modifier</string>
          </property>
         </widget>
        </item>
@@ -310,9 +310,9 @@
       </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="tabUsers">
+    <widget class="QWidget" name="tabUtilisateurs">
      <attribute name="title">
-      <string>Users</string>
+      <string>Utilisateurs</string>
      </attribute>
      <widget class="QWidget" name="horizontalLayoutWidget_2">
       <property name="geometry">
@@ -338,7 +338,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButtonConfirm">
+        <widget class="QPushButton" name="pushButtonValider">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -347,12 +347,12 @@
           </font>
          </property>
          <property name="text">
-          <string>Confirm</string>
+          <string>Valider</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButtonList">
+        <widget class="QPushButton" name="pushButtonLister">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -361,12 +361,12 @@
           </font>
          </property>
          <property name="text">
-          <string>List</string>
+          <string>Lister</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButtonDelete">
+        <widget class="QPushButton" name="pushButtonSupprimer">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -375,12 +375,12 @@
           </font>
          </property>
          <property name="text">
-          <string>Delete</string>
+          <string>Supprimer</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButtonReset">
+        <widget class="QPushButton" name="pushButtonEffacer">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -389,7 +389,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Reset</string>
+          <string>Effacer</string>
          </property>
         </widget>
        </item>
@@ -436,7 +436,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QLabel" name="labelFindBy">
+        <widget class="QLabel" name="labelRechercher">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -445,12 +445,12 @@
           </font>
          </property>
          <property name="text">
-          <string>Find user by</string>
+          <string>Rechercher un utilisateur à partir se son</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBoxFindBy">
+        <widget class="QComboBox" name="comboBoxRechercherPar">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -468,13 +468,13 @@
          </item>
          <item>
           <property name="text">
-           <string>Username</string>
+           <string>Login</string>
           </property>
          </item>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEditSearch">
+        <widget class="QLineEdit" name="lineEditRechercher">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -485,9 +485,9 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButtonSearch">
+        <widget class="QPushButton" name="pushButtonRechercher">
          <property name="text">
-          <string>Search</string>
+          <string>Rechercher</string>
          </property>
         </widget>
        </item>
@@ -499,12 +499,12 @@
         <x>0</x>
         <y>40</y>
         <width>321</width>
-        <height>221</height>
+        <height>250</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout_3">
        <item row="0" column="0">
-        <widget class="QLabel" name="labelId_3">
+        <widget class="QLabel" name="labelId">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -518,7 +518,7 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEditId_3">
+        <widget class="QLineEdit" name="lineEditId">
          <property name="enabled">
           <bool>false</bool>
          </property>
@@ -557,7 +557,7 @@
         </widget>
        </item>
        <item row="2" column="0">
-        <widget class="QLabel" name="labelFirstName">
+        <widget class="QLabel" name="labelPrenom">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -566,12 +566,37 @@
           </font>
          </property>
          <property name="text">
-          <string>First name</string>
+          <string>Prénom :</string>
          </property>
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QLineEdit" name="lineEditFirstName">
+        <widget class="QLineEdit" name="lineEditPrenom">
+         <property name="font">
+          <font>
+           <family>Tahoma</family>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="labelNom">
+        <property name="font">
+         <font>
+          <family>Tahoma</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+         <property name="text">
+          <string>Nom :</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="lineEditNom">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -582,7 +607,7 @@
         </widget>
        </item>
        <item row="4" column="0">
-        <widget class="QLabel" name="labelPassword_3">
+        <widget class="QLabel" name="labelPassword">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -591,12 +616,12 @@
           </font>
          </property>
          <property name="text">
-          <string>Password :</string>
+          <string>Mot de passe :</string>
          </property>
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QLineEdit" name="lineEditPassword_3">
+        <widget class="QLineEdit" name="lineEditPassword">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -610,7 +635,7 @@
         </widget>
        </item>
        <item row="5" column="0">
-        <widget class="QLabel" name="labelConfirmPassword_3">
+        <widget class="QLabel" name="labelConfirmPassword">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -619,12 +644,12 @@
           </font>
          </property>
          <property name="text">
-          <string>Confirm password :</string>
+          <string>Confirmer mot de passe :</string>
          </property>
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QLineEdit" name="lineEditConfirmPassword_3">
+        <widget class="QLineEdit" name="lineEditConfirmPassword">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -638,7 +663,7 @@
         </widget>
        </item>
        <item row="6" column="0">
-        <widget class="QLabel" name="labelRole_3">
+        <widget class="QLabel" name="labelRole">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -647,12 +672,12 @@
           </font>
          </property>
          <property name="text">
-          <string>Role</string>
+          <string>Role :</string>
          </property>
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QComboBox" name="comboBoxRole_3">
+        <widget class="QComboBox" name="comboBoxRole">
          <property name="font">
           <font>
            <family>Tahoma</family>
@@ -684,16 +709,6 @@
           </property>
          </item>
         </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="labelLastName">
-         <property name="text">
-          <string>Last name</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QLineEdit" name="lineEditLastName"/>
        </item>
       </layout>
      </widget>
@@ -743,7 +758,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Create</string>
+          <string>Créer</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -760,7 +775,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Modify</string>
+          <string>Modifier</string>
          </property>
         </widget>
        </item>
@@ -779,7 +794,7 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_9">
      <item>
-      <widget class="QLabel" name="labelConnectedUserTitle">
+      <widget class="QLabel" name="labelUtilisateurConnecteTitre">
        <property name="font">
         <font>
          <family>Tahoma</family>
@@ -788,12 +803,12 @@
         </font>
        </property>
        <property name="text">
-        <string>Connected user :</string>
+        <string>Utilisateur connecté :</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="labelConnectedUser">
+      <widget class="QLabel" name="labelUtlisateurConnecte">
        <property name="font">
         <font>
          <family>Tahoma</family>
@@ -808,12 +823,12 @@
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButtonExit_3">
+   <widget class="QPushButton" name="pushButtonQuitter">
     <property name="geometry">
      <rect>
-      <x>890</x>
+      <x>884</x>
       <y>470</y>
-      <width>65</width>
+      <width>71</width>
       <height>31</height>
      </rect>
     </property>
@@ -825,7 +840,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Exit</string>
+     <string>Quitter</string>
     </property>
    </widget>
   </widget>
@@ -835,7 +850,7 @@
      <x>0</x>
      <y>0</y>
      <width>960</width>
-     <height>24</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

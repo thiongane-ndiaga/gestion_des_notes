@@ -50,7 +50,7 @@
      </font>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tabProfile">
      <attribute name="title">
@@ -295,7 +295,7 @@
         <x>0</x>
         <y>410</y>
         <width>961</width>
-        <height>32</height>
+        <height>33</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_12">
@@ -887,7 +887,7 @@
         <x>848</x>
         <y>470</y>
         <width>121</width>
-        <height>31</height>
+        <height>33</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -1370,7 +1370,7 @@
         <x>0</x>
         <y>410</y>
         <width>961</width>
-        <height>32</height>
+        <height>33</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_18">
@@ -1485,7 +1485,7 @@
         <x>848</x>
         <y>470</y>
         <width>121</width>
-        <height>31</height>
+        <height>33</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -1895,7 +1895,7 @@
         <x>0</x>
         <y>410</y>
         <width>961</width>
-        <height>32</height>
+        <height>33</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_22">
@@ -2060,7 +2060,7 @@
       <x>848</x>
       <y>470</y>
       <width>121</width>
-      <height>31</height>
+      <height>33</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -2103,7 +2103,7 @@
      <x>0</x>
      <y>0</y>
      <width>960</width>
-     <height>21</height>
+     <height>24</height>
     </rect>
    </property>
   </widget>

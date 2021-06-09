@@ -15,22 +15,21 @@ UIAdministrateur::UIAdministrateur(QObject *controller)
 {
     ui->setupUi(this);
 
-    connect(ui->pushButtonConfirm, SIGNAL(clicked()),
+    connect(ui->pushButtonValider, SIGNAL(clicked()),
             controller, SLOT(onUIAdministrateurValiderClicked()));
 }
 
 bool UIAdministrateur::getInputs(int* identifiant, QString &login, QString &prenom, QString &nom, QString &password, QString &type, bool* operation)
 {
-    if (ui->lineEditId_3->text().compare("") != 0)
-        *identifiant = ui->lineEditId_3->text().toInt();
+    if (ui->lineEditId->text().compare("") != 0)
+        *identifiant = ui->lineEditId->text().toInt();
 
     login = ui->lineEditLogin->text();
-    prenom = ui->lineEditFirstName->text();
-    nom = ui->lineEditLastName->text();
-    password = ui->lineEditPassword_3->text();
+    prenom = ui->lineEditPrenom->text();
+    nom = ui->lineEditNom->text();
+    password = ui->lineEditPassword->text();
 
-    type = ui->comboBoxRole_3->currentText();
-    qDebug() << "Type : "<< type ;
+    type = ui->comboBoxRole->currentText();
     *operation = ui->radioButtonCreate->isChecked(); // true si creation ...
 
     return true;

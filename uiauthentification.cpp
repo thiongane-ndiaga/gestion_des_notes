@@ -27,8 +27,8 @@ bool UIAuthentification::getInputs (QString &login, QString &password)
     if (login.compare("") == 0 ||
             password.compare("") == 0) {
 
-        QMessageBox::critical(this, "Missing informations",
-                              "Please complete all fields !",
+        QMessageBox::critical(this, "Informations manquantes",
+                              "Veuillez remplir tous les champs !",
                               QMessageBox::Ok);
         return false;
     }
