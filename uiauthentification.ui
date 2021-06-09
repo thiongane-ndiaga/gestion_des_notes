@@ -60,7 +60,7 @@ color: rgb(255, 255, 255);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../qt-i-logo-esmt.png</pixmap>
+        <pixmap resource="assets.qrc">:/logo/qt-i-logo-esmt.png</pixmap>
        </property>
       </widget>
      </item>
@@ -289,12 +289,14 @@ color: rgba(150, 2, 0, 1);
      <x>0</x>
      <y>0</y>
      <width>480</width>
-     <height>22</height>
+     <height>24</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="assets.qrc"/>
+ </resources>
  <connections/>
 </ui>

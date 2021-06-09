@@ -1,5 +1,5 @@
 <RCC>
     <qresource prefix="/logo">
-        <file>logo_esmt_acad.jpeg</file>
+        <file>qt-i-logo-esmt.png</file>
     </qresource>
 </RCC>
