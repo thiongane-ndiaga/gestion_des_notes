@@ -8,6 +8,12 @@ UIEtudiant::UIEtudiant(QWidget *parent) :
     ui->setupUi(this);
 }
 
+UIEtudiant::UIEtudiant(QObject *controller)
+    : ui(new Ui::UIEtudiant)
+{
+    ui->setupUi(this);
+}
+
 UIEtudiant::~UIEtudiant()
 {
     delete ui;

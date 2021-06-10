@@ -3,6 +3,9 @@
 
 #include "uiauthentification.hpp"
 #include "uiadministrateur.hpp"
+#include "uiresponsable.hpp"
+#include "uietudiant.hpp"
+#include "uiformateur.hpp"
 #include "service.hpp"
 
 class FlowController : public QObject
@@ -13,7 +16,9 @@ private:
     // Les interfaces graphiques (UIComponent)
     UIAuthentification* uiAuthentification;
     UIAdministrateur* uiAdministrateur;
-
+    UIResponsable* uiResponsable;
+    UIEtudiant* uiEtudiant;
+    UIFormateur* uiFormateur;
     // Couche Service (BusinessLayerComponent)
     Service* service;
 

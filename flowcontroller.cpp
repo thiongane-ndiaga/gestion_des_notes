@@ -48,17 +48,20 @@ void FlowController::onUIAuthentificationLogInClicked()
 
                 case RESPONSABLE:
                     // On affiche la fenêtre du responsable ...
-                    this->uiAuthentification->notificationInformation("UIResponsable :: Working on it !");
+                    uiResponsable = new UIResponsable(this);
+                    uiResponsable->show();
                     break;
 
                 case FORMATEUR:
                     // On affiche la fenêtre du formateur ...
-                    this->uiAuthentification->notificationInformation("UIFormateur :: Working on it !");
+                    uiFormateur = new UIFormateur(this);
+                    uiFormateur->show();
                     break;
 
                 case ETUDIANT:
                     // On affiche la fenêtre de l'étudiant ...
-                    this->uiAuthentification->notificationInformation("UIEtudiant :: Working on it !");
+                    uiEtudiant = new UIEtudiant(this);
+                    uiEtudiant->show();
                     break;
                 default:;
             }
