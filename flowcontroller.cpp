@@ -135,7 +135,7 @@ void FlowController::onUIAdministrateurSupprimerClicked()
 {
     int id = this->uiAdministrateur->getUserToRemove();
     qDebug () <<"ID TO REMOVE" << id;
-    service->deleteUser(id);
+    //service->deleteUser(id);
 }
 
 void FlowController::onUIAdministrateurExitClicked()
@@ -150,7 +150,7 @@ void FlowController::onUIAdministrateurRechercherClicked()
 
 void FlowController::onUIAdministrateurProfilClicked()
 {
-
+    this->uiAdministrateur->populateForm();
 }
 
 void FlowController::exec()

@@ -18,6 +18,9 @@ public:
 
     bool getInputs(int* identifiant, QString &login, QString &prenom, QString &nom, QString &password, QString &type, bool* operation);
     int getUserToRemove();
+    void populateForm();
+
+
     ~UIAdministrateur();
 
     void setTableView(QAbstractItemModel *model);
