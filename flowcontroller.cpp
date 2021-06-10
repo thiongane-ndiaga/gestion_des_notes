@@ -44,6 +44,8 @@ void FlowController::onUIAuthentificationLogInClicked()
                     // On affiche la fenêtre d'administration ...
                     uiAdministrateur = new UIAdministrateur(this);
                     uiAdministrateur->show();
+                    // On affiche les donnees sur le tableau
+                    uiAdministrateur->setTableView(service->listUsers());
                     break;
 
                 case RESPONSABLE:
@@ -117,8 +119,8 @@ void FlowController::onUIAdministrateurValiderClicked()
 
 void FlowController::onUIAdministrateurListerClicked()
 {
-    UserModel* model = service->listUsers();
-    this->uiAdministrateur->getTableView()->setModel(model);
+    // On affiche les donnees sur le tableau
+    this->uiAdministrateur->setTableView(service->listUsers());
 }
 
 void FlowController::onUIAdministrateurEffacerClicked()

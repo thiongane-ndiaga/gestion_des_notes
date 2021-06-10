@@ -19,7 +19,7 @@ public:
     bool getInputs(int* identifiant, QString &login, QString &prenom, QString &nom, QString &password, QString &type, bool* operation);
     ~UIAdministrateur();
 
-    QTableView* getTableView();
+    void setTableView(QAbstractItemModel *model);
 
 private:
     Ui::UIAdministrateur *ui;

@@ -38,8 +38,8 @@ bool UIAdministrateur::getInputs(int* identifiant, QString &login, QString &pren
     return true;
 }
 
-QTableView* UIAdministrateur::getTableView(){
-    return ui->tableView;
+void UIAdministrateur::setTableView(QAbstractItemModel *model){
+    ui->tableView->setModel(model);
 }
 UIAdministrateur::~UIAdministrateur()
 {
