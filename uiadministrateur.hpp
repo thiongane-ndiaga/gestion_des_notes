@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "ui_uiadministrateur.h"
+#include "user.hpp"
 
 namespace Ui {
     class UIAdministrateur;
@@ -17,6 +18,8 @@ public:
     UIAdministrateur(QObject *controller = nullptr);
 
     bool getInputs(int* identifiant, QString &login, QString &prenom, QString &nom, QString &password, QString &type, bool* operation);
+    void setProfileInputs(User u);
+
     int getUserToRemove();
     ~UIAdministrateur();
 

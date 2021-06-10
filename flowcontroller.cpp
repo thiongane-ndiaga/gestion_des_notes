@@ -44,6 +44,8 @@ void FlowController::onUIAuthentificationLogInClicked()
                     // On affiche la fenêtre d'administration ...
                     uiAdministrateur = new UIAdministrateur(this);
                     uiAdministrateur->show();
+                    qDebug () << "Login : " << user.getLogin();
+                    uiAdministrateur->setProfileInputs(user);
                     // On affiche les donnees sur le tableau
                     uiAdministrateur->setTableView(service->listUsers());
                     break;
