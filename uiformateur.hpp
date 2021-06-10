@@ -12,7 +12,8 @@ class UIFormateur : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit UIFormateur(QWidget *parent = nullptr);
+     UIFormateur(QWidget *parent = nullptr);
+     UIFormateur(QObject *controller);
     ~UIFormateur();
 
 private:

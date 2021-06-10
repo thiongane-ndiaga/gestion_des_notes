@@ -8,6 +8,12 @@ UIFormateur::UIFormateur(QWidget *parent) :
     ui->setupUi(this);
 }
 
+UIFormateur::UIFormateur(QObject *controller)
+    : ui(new Ui::UIFormateur)
+{
+    ui->setupUi(this);
+}
+
 UIFormateur::~UIFormateur()
 {
     delete ui;

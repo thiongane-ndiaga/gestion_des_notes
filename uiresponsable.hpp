@@ -12,7 +12,8 @@ class UIResponsable : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit UIResponsable(QWidget *parent = nullptr);
+    UIResponsable(QWidget *parent = nullptr);
+    UIResponsable(QObject *controller);
     ~UIResponsable();
 
 private:

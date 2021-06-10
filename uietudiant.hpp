@@ -12,7 +12,8 @@ class UIEtudiant : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit UIEtudiant(QWidget *parent = nullptr);
+     UIEtudiant(QWidget *parent = nullptr);
+     UIEtudiant(QObject *controller);
     ~UIEtudiant();
 
 private:

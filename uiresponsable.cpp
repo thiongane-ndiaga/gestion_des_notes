@@ -8,6 +8,11 @@ UIResponsable::UIResponsable(QWidget *parent) :
     ui->setupUi(this);
 }
 
+UIResponsable::UIResponsable(QObject *controller)
+    : ui(new Ui::UIResponsable)
+{
+    ui->setupUi(this);
+}
 UIResponsable::~UIResponsable()
 {
     delete ui;
