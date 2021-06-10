@@ -20,6 +20,9 @@ UIAdministrateur::UIAdministrateur(QObject *controller)
 
     connect(ui->pushButtonLister, SIGNAL(clicked()),
             controller, SLOT(onUIAdministrateurListerClicked()));
+
+    connect(ui->pushButtonSupprimer, SIGNAL(clicked()),
+            controller, SLOT(onUIAdministrateurSupprimerClicked()));
 }
 
 bool UIAdministrateur::getInputs(int* identifiant, QString &login, QString &prenom, QString &nom, QString &password, QString &type, bool* operation)
@@ -41,6 +44,12 @@ bool UIAdministrateur::getInputs(int* identifiant, QString &login, QString &pren
 void UIAdministrateur::setTableView(QAbstractItemModel *model){
     ui->tableView->setModel(model);
 }
+
+int UIAdministrateur::getUserToRemove()
+{
+    return ui->tableView->selectionModel()->selectedRows(0).value(0).data().toInt();
+}
+
 UIAdministrateur::~UIAdministrateur()
 {
     delete ui;

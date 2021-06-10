@@ -25,6 +25,7 @@ public:
     bool authentifier(QString login, QString password, User* user);
     void createUser(User user);
     UserModel* listUsers();
+    void deleteUser(uint id);
 };
 
 #endif // SERVICE_H

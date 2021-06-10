@@ -17,6 +17,7 @@ public:
     UIAdministrateur(QObject *controller = nullptr);
 
     bool getInputs(int* identifiant, QString &login, QString &prenom, QString &nom, QString &password, QString &type, bool* operation);
+    int getUserToRemove();
     ~UIAdministrateur();
 
     void setTableView(QAbstractItemModel *model);
