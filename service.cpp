@@ -48,8 +48,8 @@ UserModel* Service::listUsers(){
 }
 
 void Service::deleteUser(uint id){
-    UserModel * userModel = new UserModel(DBAccess::getInstance());
-    userModel->remove(id);
+    UserModel userModel(DBAccess::getInstance());
+    userModel.remove(id);
 }
 
 Service::~Service()
