@@ -19,6 +19,8 @@ public:
     bool getInputs(int* identifiant, QString &login, QString &prenom, QString &nom, QString &password, QString &type, bool* operation);
     ~UIAdministrateur();
 
+    QTableView* getTableView();
+
 private:
     Ui::UIAdministrateur *ui;
 };

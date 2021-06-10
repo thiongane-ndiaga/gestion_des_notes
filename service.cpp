@@ -41,6 +41,13 @@ void Service::createUser(User user)
     userModel.create(user);
 }
 
+UserModel* Service::listUsers(){
+    UserModel * userModel = new UserModel(DBAccess::getInstance());
+    userModel->readAll();
+    return userModel;
+}
+
+
 Service::~Service()
 {
     DBAccess::release();

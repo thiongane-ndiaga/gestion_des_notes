@@ -17,6 +17,9 @@ UIAdministrateur::UIAdministrateur(QObject *controller)
 
     connect(ui->pushButtonValider, SIGNAL(clicked()),
             controller, SLOT(onUIAdministrateurValiderClicked()));
+
+    connect(ui->pushButtonLister, SIGNAL(clicked()),
+            controller, SLOT(onUIAdministrateurListerClicked()));
 }
 
 bool UIAdministrateur::getInputs(int* identifiant, QString &login, QString &prenom, QString &nom, QString &password, QString &type, bool* operation)
@@ -35,6 +38,9 @@ bool UIAdministrateur::getInputs(int* identifiant, QString &login, QString &pren
     return true;
 }
 
+QTableView* UIAdministrateur::getTableView(){
+    return ui->tableView;
+}
 UIAdministrateur::~UIAdministrateur()
 {
     delete ui;

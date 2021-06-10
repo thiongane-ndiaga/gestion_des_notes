@@ -117,7 +117,8 @@ void FlowController::onUIAdministrateurValiderClicked()
 
 void FlowController::onUIAdministrateurListerClicked()
 {
-
+    UserModel* model = service->listUsers();
+    this->uiAdministrateur->getTableView()->setModel(model);
 }
 
 void FlowController::onUIAdministrateurEffacerClicked()

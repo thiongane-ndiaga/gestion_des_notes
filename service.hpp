@@ -4,6 +4,7 @@
 #include "usermodel.hpp"
 #include <QDebug>
 #include <QMessageBox>
+#include <QTableView>
 
 class Service
 {
@@ -23,6 +24,7 @@ public:
 
     bool authentifier(QString login, QString password, User* user);
     void createUser(User user);
+    UserModel* listUsers();
 };
 
 #endif // SERVICE_H
