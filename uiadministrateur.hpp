@@ -19,11 +19,17 @@ public:
 
     bool getInputs(int* identifiant, QString &login, QString &prenom, QString &nom, QString &password, QString &type, bool* operation);
     void setProfileInputs(User u);
+    void clearInputs();
 
     int getUserToRemove();
     ~UIAdministrateur();
 
     void setTableView(QAbstractItemModel *model);
+    void notificationError (QString message);
+    void notificationInformation (QString message);
+
+private slots:
+    void on_tableView_doubleClicked(const QModelIndex &index);
 
 private:
     Ui::UIAdministrateur *ui;

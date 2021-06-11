@@ -1,6 +1,7 @@
 #include "uiadministrateur.hpp"
 #include "ui_uiadministrateur.h"
-#include <QDebug> 
+#include <QMessageBox>
+#include <QDebug>
 
 /* Try -> #include "ui_uiadministrateur.h" ; if -> #include "ui_UIAdministrateur.h" not work*/
 
@@ -24,6 +25,7 @@ UIAdministrateur::UIAdministrateur(QObject *controller)
 
     connect(ui->pushButtonSupprimer, SIGNAL(clicked()),
             controller, SLOT(onUIAdministrateurSupprimerClicked()));
+
 }
 
 bool UIAdministrateur::getInputs(int* identifiant, QString &login, QString &prenom, QString &nom, QString &password, QString &type, bool* operation)
@@ -56,12 +58,52 @@ void UIAdministrateur::setProfileInputs(User u){
 
 }
 
+void UIAdministrateur::clearInputs(){
+    ui->lineEditId->setText("");
+    ui->lineEditLogin->setText("");
+    ui->lineEditPrenom->setText("");
+    ui->lineEditNom->setText("");
+    ui->lineEditPassword->setText("");
+    ui->lineEditConfirmPassword->setText("");
+    ui->comboBoxRole->setCurrentIndex(0);
+    ui->radioButtonCreate->setChecked(true);
+}
+
 int UIAdministrateur::getUserToRemove()
 {
     return ui->tableView->selectionModel()->selectedRows(0).value(0).data().toInt();
 }
 
+void UIAdministrateur::on_tableView_doubleClicked(const QModelIndex &index)
+{
+    int currentRow = index.row();
+    int id = ui->tableView->model()->index(currentRow,0).data().toInt();
+
+    ui->lineEditId->setText(QString::number(id));
+    ui->lineEditLogin->setText(ui->tableView->model()->index(currentRow,1).data().toString());
+    ui->lineEditPrenom->setText(ui->tableView->model()->index(currentRow,2).data().toString());
+    ui->lineEditNom->setText(ui->tableView->model()->index(currentRow,3).data().toString());
+    ui->lineEditPassword->setText(ui->tableView->model()->index(currentRow,4).data().toString());
+    ui->lineEditConfirmPassword->setText(ui->tableView->model()->index(currentRow,4).data().toString());
+    ui->comboBoxRole->setCurrentIndex(ui->tableView->model()->index(currentRow,5).data().toInt());
+    ui->radioButtonModify->setChecked(true);
+}
+
+void UIAdministrateur::notificationError (QString message)
+{
+    QMessageBox::critical(this, "Erreur", message, QMessageBox::Ok);
+}
+
+void UIAdministrateur::notificationInformation (QString message)
+{
+    QMessageBox::information(this, "Information", message, QMessageBox::Ok);
+}
+
+
 UIAdministrateur::~UIAdministrateur()
 {
     delete ui;
 }
+
+
+
