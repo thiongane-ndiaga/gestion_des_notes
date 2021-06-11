@@ -60,7 +60,7 @@ void UIAdministrateur::setProfileInputs(User u){
     ui->lineEditNomProfil->setText(u.getNom());
     ui->lineEditPasswordProfil->setText(u.getPassword());
     ui->lineEditConfirmPasswordProfil->setText(u.getPassword());
-
+    ui->labelUtlisateurConnecte->setText(u.getPrenom()+" "+u.getNom());
 }
 
 void UIAdministrateur::clearInputs(){
@@ -103,6 +103,8 @@ void UIAdministrateur::getIdSeacrh(int* id)
 {
     if (ui->lineEditRechercher->text().compare("") != 0)
         *id = ui->lineEditRechercher->text().toInt();
+    else
+        qDebug() << "Entrer un chiffre";
 }
 
 QString UIAdministrateur::searchMode()
