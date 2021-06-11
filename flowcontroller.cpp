@@ -44,6 +44,8 @@ void FlowController::onUIAuthentificationLogInClicked()
                     // On affiche la fenêtre d'administration ...
                     uiAdministrateur = new UIAdministrateur(this);
                     uiAdministrateur->show();
+                    qDebug () << "Login : " << user.getLogin();
+                    uiAdministrateur->setProfileInputs(user);
                     // On affiche les donnees sur le tableau
                     uiAdministrateur->setTableView(service->listUsers());
                     break;
@@ -105,17 +107,28 @@ void FlowController::onUIAdministrateurValiderClicked()
     if (statut == true)
     {
          qDebug () << "Data recup successfully!";
+         User user (nom, prenom, login, password);
+         user.setType(type);
         if (operation == true)
         {
-            // Creation
-            User user (nom, prenom, login, password);
-            user.setType(type);
+            if(service->findUserBy(login)){
+                this->uiAdministrateur->notificationError("Un utilisateur avec ce login existe déja !");
+            }else{
+                // Creation
+                service->createUser(user);
 
-            service->createUser(user);
+                this->uiAdministrateur->setTableView(service->listUsers());
+                // On vide les champs
+                this->uiAdministrateur->clearInputs();
+            }
+
         }
         else
         {
             // Mise à jour ...
+            user.setIdentifiant(identifiant);
+            service->updateUser(user);
+            this->uiAdministrateur->setTableView(service->listUsers());
         }
     }
 }
