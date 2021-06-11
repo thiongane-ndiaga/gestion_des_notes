@@ -102,7 +102,45 @@ bool UserModel::readBy(QString login)
     QSqlRecord record = query.record();
     this->setQuery(query);
 
+    this->setHeaderData(0, Qt::Horizontal, tr("Identifiant"));
+    this->setHeaderData(1, Qt::Horizontal, tr("Nom"));
+    this->setHeaderData(2, Qt::Horizontal, tr("Prénom"));
+    this->setHeaderData(3, Qt::Horizontal, tr("Login"));
+    this->setHeaderData(4, Qt::Horizontal, tr("Mot de passe"));
+    this->setHeaderData(5, Qt::Horizontal, tr("Type"));
+
     qDebug() << "User with login" << login << "found.";
+    dbAccess->close();
+
+    return true;
+}
+
+bool UserModel::readBy(int id)
+{
+
+    dbAccess->open();
+
+    QSqlQuery query(dbAccess->database());
+    query.prepare("SELECT identifiant AS Identifiant, nom AS Nom, prenom AS Prénom, login AS Login, type AS Type FROM t_users WHERE identifiant=:identifiant");
+    query.bindValue(":identifiant", id);
+    query.exec();
+
+    if (false == query.next()) // Aucun enregistrement trouvé
+    {
+        return false;
+    }
+
+    QSqlRecord record = query.record();
+    this->setQuery(query);
+
+    this->setHeaderData(0, Qt::Horizontal, tr("Identifiant"));
+    this->setHeaderData(1, Qt::Horizontal, tr("Nom"));
+    this->setHeaderData(2, Qt::Horizontal, tr("Prénom"));
+    this->setHeaderData(3, Qt::Horizontal, tr("Login"));
+    this->setHeaderData(4, Qt::Horizontal, tr("Mot de passe"));
+    this->setHeaderData(5, Qt::Horizontal, tr("Type"));
+
+    qDebug() << "User with login" << id << "found.";
     dbAccess->close();
 
     return true;

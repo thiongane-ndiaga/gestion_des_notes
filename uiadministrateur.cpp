@@ -26,6 +26,9 @@ UIAdministrateur::UIAdministrateur(QObject *controller)
     connect(ui->pushButtonSupprimer, SIGNAL(clicked()),
             controller, SLOT(onUIAdministrateurSupprimerClicked()));
 
+    connect(ui->pushButtonRechercher, SIGNAL(clicked()),
+            controller, SLOT(onUIAdministrateurRechercherClicked()));
+
 }
 
 
@@ -90,6 +93,26 @@ void UIAdministrateur::on_tableView_doubleClicked(const QModelIndex &index)
     ui->lineEditConfirmPassword->setText(ui->tableView->model()->index(currentRow,4).data().toString());
     ui->comboBoxRole->setCurrentIndex(ui->tableView->model()->index(currentRow,5).data().toInt());
     ui->radioButtonModify->setChecked(true);
+}
+
+void UIAdministrateur::getTextSeacrh(QString &login)
+{
+    login = ui->lineEditRechercher->text();
+}
+void UIAdministrateur::getIdSeacrh(int* id)
+{
+    if (ui->lineEditRechercher->text().compare("") != 0)
+        *id = ui->lineEditRechercher->text().toInt();
+}
+
+QString UIAdministrateur::searchMode()
+{
+    if("Id" == ui->comboBoxRechercherPar->currentText())
+    {
+        return "id";
+    }
+    else
+        return "login";
 }
 
 void UIAdministrateur::notificationError (QString message)

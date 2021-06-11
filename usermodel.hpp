@@ -22,6 +22,7 @@ public:
     void update(User user);
     void remove(uint identifiant);
     bool readBy(QString login);
+    bool readBy(int id);
     bool readBy(QString login, QString password, User *user);
     void readAll();
 

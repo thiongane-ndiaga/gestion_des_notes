@@ -158,7 +158,21 @@ void FlowController::onUIAdministrateurExitClicked()
 
 void FlowController::onUIAdministrateurRechercherClicked()
 {
+    int identifiant = -1;
+    QString login;
 
+    if("id" == this->uiAdministrateur->searchMode())
+    {
+        this->uiAdministrateur->getIdSeacrh(&identifiant);
+        this->uiAdministrateur->setTableView(service->findUserById(identifiant));
+
+    }
+    else
+    {
+        this->uiAdministrateur->getTextSeacrh(login);
+        this->uiAdministrateur->setTableView(service->findUserByLogin(login));
+
+    }
 }
 
 void FlowController::onUIAdministrateurProfilClicked()

@@ -20,7 +20,9 @@ public:
     bool getInputs(int* identifiant, QString &login, QString &prenom, QString &nom, QString &password, QString &type, bool* operation);
     void setProfileInputs(User u);
     void clearInputs();
-
+    void getTextSeacrh(QString &login);
+    void getIdSeacrh(int* id);
+    QString searchMode();
     int getUserToRemove();
 
 
