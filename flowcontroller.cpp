@@ -150,7 +150,6 @@ void FlowController::onUIAdministrateurRechercherClicked()
 
 void FlowController::onUIAdministrateurProfilClicked()
 {
-    this->uiAdministrateur->populateForm();
 }
 
 void FlowController::exec()

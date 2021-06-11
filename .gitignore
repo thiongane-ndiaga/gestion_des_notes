@@ -71,3 +71,5 @@ Thumbs.db
 *.dll
 *.exe
 
+# Pour ne pas changer les chemins d'acces vers la bd
+dbaccess.cpp

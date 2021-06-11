@@ -23,9 +23,6 @@ UIAdministrateur::UIAdministrateur(QObject *controller)
 
     connect(ui->pushButtonSupprimer, SIGNAL(clicked()),
             controller, SLOT(onUIAdministrateurSupprimerClicked()));
-
-    connect(ui->tableView->selectionModel(), SIGNAL(selectionChanged(const QModelIndex &, const QModelIndex &)),
-            controller, SLOT(onUIAdministrateurProfilClicked()));
 }
 
 
@@ -55,10 +52,6 @@ int UIAdministrateur::getUserToRemove()
     return ui->tableView->selectionModel()->selectedRows(0).value(0).data().toInt();
 }
 
-void UIAdministrateur::populateForm(){
-    qDebug() << "----------" << ui->tableView->selectionModel()->selectedRows(0).value(0).data().toString();
-   // ui->lineEditNom->setText(ui->tableView->selectionModel()->selectedRows(0).value(0).data().toString());
-}
 
 UIAdministrateur::~UIAdministrateur()
 {
