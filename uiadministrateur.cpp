@@ -29,6 +29,9 @@ UIAdministrateur::UIAdministrateur(QObject *controller)
     connect(ui->pushButtonRechercher, SIGNAL(clicked()),
             controller, SLOT(onUIAdministrateurRechercherClicked()));
 
+    connect(ui->pushButtonEffacer, SIGNAL(clicked()),
+            controller, SLOT(onUIAdministrateurEffacerClicked()()));
+
 }
 
 
@@ -60,6 +63,8 @@ void UIAdministrateur::setProfileInputs(User u){
     ui->lineEditNomProfil->setText(u.getNom());
     ui->lineEditPasswordProfil->setText(u.getPassword());
     ui->lineEditConfirmPasswordProfil->setText(u.getPassword());
+
+    //Utilisateur connecté: Prenom nom
     ui->labelUtlisateurConnecte->setText(u.getPrenom()+" "+u.getNom());
 }
 
@@ -117,6 +122,11 @@ QString UIAdministrateur::searchMode()
         return "login";
 }
 
+/*void UIAdministrateur::clearTableView()
+{
+    ui->tableView->setModel(NULL);
+}
+*/
 void UIAdministrateur::notificationError (QString message)
 {
     QMessageBox::critical(this, "Erreur", message, QMessageBox::Ok);

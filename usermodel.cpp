@@ -102,6 +102,29 @@ bool UserModel::readBy(QString login)
     QSqlRecord record = query.record();
     this->setQuery(query);
 
+    qDebug() << "User with login" << login << "found.";
+    dbAccess->close();
+
+    return true;
+}
+
+bool UserModel::readByLoginSearch(QString login)
+{
+    dbAccess->open();
+
+    QSqlQuery query(dbAccess->database());
+    query.prepare("SELECT identifiant AS Identifiant, nom AS Nom, prenom AS Prénom, login AS Login, type AS Type FROM t_users WHERE login=:login");
+    query.bindValue(":login", login);
+    query.exec();
+
+    if (false == query.next()) // Aucun enregistrement trouvé
+    {
+        return false;
+    }
+
+    QSqlRecord record = query.record();
+    this->setQuery(query);
+
     this->setHeaderData(0, Qt::Horizontal, tr("Identifiant"));
     this->setHeaderData(1, Qt::Horizontal, tr("Nom"));
     this->setHeaderData(2, Qt::Horizontal, tr("Prénom"));

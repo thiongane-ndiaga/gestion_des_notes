@@ -141,14 +141,16 @@ void FlowController::onUIAdministrateurListerClicked()
 
 void FlowController::onUIAdministrateurEffacerClicked()
 {
-
+    //this->uiAdministrateur->clearTableView();
 }
 
 void FlowController::onUIAdministrateurSupprimerClicked()
 {
     int id = this->uiAdministrateur->getUserToRemove();
     qDebug () <<"ID TO REMOVE" << id;
-    //service->deleteUser(id);
+    service->deleteUser(id);
+    // On affiche les donnees sur le tableau
+    this->uiAdministrateur->setTableView(service->listUsers());
 }
 
 void FlowController::onUIAdministrateurExitClicked()

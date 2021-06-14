@@ -29,6 +29,7 @@ public:
     ~UIAdministrateur();
 
     void setTableView(QAbstractItemModel *model);
+    void clearTableView();
     void notificationError (QString message);
     void notificationInformation (QString message);
 

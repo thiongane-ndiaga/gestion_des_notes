@@ -54,7 +54,7 @@ bool Service::findUserBy(QString login){
 
 UserModel* Service::findUserByLogin(QString login){
     UserModel* userModel = new UserModel(DBAccess::getInstance());
-    userModel->readBy(login);
+    userModel->readByLoginSearch(login);
     return userModel;
 }
 UserModel* Service::findUserById(int id)
