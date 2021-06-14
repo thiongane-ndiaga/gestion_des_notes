@@ -84,7 +84,7 @@ void FlowController::onUIAuthentificationSignUpClicked()
 
 void FlowController::onUIAuthentificationExitClicked()
 {
-
+     this->uiAuthentification->close();
 }
 
 /**
@@ -155,7 +155,7 @@ void FlowController::onUIAdministrateurSupprimerClicked()
 
 void FlowController::onUIAdministrateurExitClicked()
 {
-
+    this->uiAdministrateur->close();
 }
 
 void FlowController::onUIAdministrateurRechercherClicked()

@@ -30,7 +30,11 @@ UIAdministrateur::UIAdministrateur(QObject *controller)
             controller, SLOT(onUIAdministrateurRechercherClicked()));
 
     connect(ui->pushButtonEffacer, SIGNAL(clicked()),
-            controller, SLOT(onUIAdministrateurEffacerClicked()()));
+            controller, SLOT(onUIAdministrateurEffacerClicked()));
+
+    connect(ui->pushButtonQuitter, SIGNAL(clicked()),
+            controller, SLOT(onUIAdministrateurExitClicked()));
+
 
 }
 
