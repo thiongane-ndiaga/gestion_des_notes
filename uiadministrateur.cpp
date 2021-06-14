@@ -35,9 +35,7 @@ UIAdministrateur::UIAdministrateur(QObject *controller)
     connect(ui->pushButtonQuitter, SIGNAL(clicked()),
             controller, SLOT(onUIAdministrateurExitClicked()));
 
-
 }
-
 
 
 bool UIAdministrateur::getInputs(int* identifiant, QString &login, QString &prenom, QString &nom, QString &password, QString &type, bool* operation)
