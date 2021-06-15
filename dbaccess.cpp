@@ -24,7 +24,7 @@ DBAccess::DBAccess()
      * Créer une base de données SQLITE avec "DB browser for SQLite"
      */
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("/Users/mnt/Desktop/gestion_des_notes/gestion_notes.db");
+    db.setDatabaseName("/Users/mac/Documents/ESMT-MASTER-2021/Qt/gestion_des_notes/gestion_notes.db");
 
     qDebug() << "DBAccess Object created and 'gestion_notes.db' has been added as default database!";
 }
