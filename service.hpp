@@ -25,6 +25,10 @@ public:
     bool authentifier(QString login, QString password, User* user);
     void createUser(User user);
     UserModel* listUsers();
+    bool findUserBy(QString login);
+    UserModel* findUserByLogin(QString login);
+    UserModel*  findUserById(int id);
+    void updateUser(User user);
     void deleteUser(uint id);
 };
 

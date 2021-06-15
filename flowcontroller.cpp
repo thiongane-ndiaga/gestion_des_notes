@@ -84,7 +84,7 @@ void FlowController::onUIAuthentificationSignUpClicked()
 
 void FlowController::onUIAuthentificationExitClicked()
 {
-
+     this->uiAuthentification->close();
 }
 
 /**
@@ -107,17 +107,28 @@ void FlowController::onUIAdministrateurValiderClicked()
     if (statut == true)
     {
          qDebug () << "Data recup successfully!";
+         User user (nom, prenom, login, password);
+         user.setType(type);
         if (operation == true)
         {
-            // Creation
-            User user (nom, prenom, login, password);
-            user.setType(type);
+            if(service->findUserBy(login)){
+                this->uiAdministrateur->notificationError("Un utilisateur avec ce login existe déja !");
+            }else{
+                // Creation
+                service->createUser(user);
 
-            service->createUser(user);
+                this->uiAdministrateur->setTableView(service->listUsers());
+                // On vide les champs
+                this->uiAdministrateur->clearInputs();
+            }
+
         }
         else
         {
             // Mise à jour ...
+            user.setIdentifiant(identifiant);
+            service->updateUser(user);
+            this->uiAdministrateur->setTableView(service->listUsers());
         }
     }
 }
@@ -130,7 +141,7 @@ void FlowController::onUIAdministrateurListerClicked()
 
 void FlowController::onUIAdministrateurEffacerClicked()
 {
-
+    //this->uiAdministrateur->clearTableView();
 }
 
 void FlowController::onUIAdministrateurSupprimerClicked()
@@ -144,17 +155,30 @@ void FlowController::onUIAdministrateurSupprimerClicked()
 
 void FlowController::onUIAdministrateurExitClicked()
 {
-
+    this->uiAdministrateur->close();
 }
 
 void FlowController::onUIAdministrateurRechercherClicked()
 {
+    int identifiant = -1;
+    QString login;
 
+    if("id" == this->uiAdministrateur->searchMode())
+    {
+        this->uiAdministrateur->getIdSeacrh(&identifiant);
+        this->uiAdministrateur->setTableView(service->findUserById(identifiant));
+
+    }
+    else
+    {
+        this->uiAdministrateur->getTextSeacrh(login);
+        this->uiAdministrateur->setTableView(service->findUserByLogin(login));
+
+    }
 }
 
 void FlowController::onUIAdministrateurProfilClicked()
 {
-
 }
 
 void FlowController::exec()
@@ -179,4 +203,95 @@ FlowController::~FlowController()
     {
         Service::release();
     }
+}
+
+
+/**
+ * @brief onUIResponsable buttons clicked
+ * définit les traitements à exécuter
+ * lorsqu'un événement se produit sur l'un des boutons
+ * de la fenêtre du responsable
+ */
+
+void FlowController::onUIResponsableValiderClicked()
+{
+
+}
+//void onUIResponsableModifierClicked();
+void FlowController::onUIResponsableListerClicked()
+{
+
+}
+void FlowController::onUIResponsableEffacerClicked()
+{
+
+}
+void FlowController::onUIResponsableSupprimerClicked()
+{
+
+}
+void FlowController::onUIResponsableExitClicked()
+{
+
+}
+void FlowController::onUIResponsableRechercherClicked()
+{
+
+}
+void FlowController::onUIResponsableProfilClicked()
+{
+
+}
+
+
+/**
+  @brief onUIFormateur buttons clicked
+ * définit les traitements à exécuter
+ * lorsqu'un événement se produit sur l'un des boutons
+ * de la fenêtre du formateur
+ */
+
+void FlowController::onUIFormateurValiderClicked()
+{
+
+}
+void FlowController::onUIFormateurListerClicked()
+{
+
+}
+void FlowController::onUIFormateurEffacerClicked()
+{
+
+}
+void FlowController::onUIFormateurSupprimerClicked()
+{
+
+}
+void FlowController::onUIFormateurExitClicked()
+{
+
+}
+void FlowController::onUIFormateurRechercherClicked()
+{
+
+}
+void FlowController::onUIFormateurProfilClicked()
+{
+
+}
+
+/**
+  @brief onUIEtudiant buttons clicked
+ * définit les traitements à exécuter
+ * lorsqu'un événement se produit sur l'un des boutons
+ * de la fenêtre de l'étudiant
+ */
+
+void FlowController::onUIEtudiantModifierClicked()
+{
+
+}
+void FlowController::onUIEtudiantListerClicked()
+{
+
 }

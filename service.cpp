@@ -47,6 +47,28 @@ UserModel* Service::listUsers(){
     return userModel;
 }
 
+bool Service::findUserBy(QString login){
+    UserModel userModel(DBAccess::getInstance());
+    return userModel.readBy(login);
+}
+
+UserModel* Service::findUserByLogin(QString login){
+    UserModel* userModel = new UserModel(DBAccess::getInstance());
+    userModel->readByLoginSearch(login);
+    return userModel;
+}
+UserModel* Service::findUserById(int id)
+{
+    UserModel* userModel = new UserModel(DBAccess::getInstance());
+    userModel->readBy(id);
+    return userModel;
+}
+
+void Service::updateUser(User user){
+    UserModel userModel(DBAccess::getInstance());
+    userModel.update(user);
+}
+
 void Service::deleteUser(uint id){
     UserModel userModel(DBAccess::getInstance());
     userModel.remove(id);

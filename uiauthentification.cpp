@@ -17,6 +17,9 @@ UIAuthentification::UIAuthentification(QObject *controller)
 
     connect(ui->pushButtonLogin, SIGNAL(clicked()),
             controller, SLOT(onUIAuthentificationLogInClicked()));
+
+    connect(ui->pushButtonQuitter, SIGNAL(clicked()),
+            controller, SLOT(onUIAuthentificationExitClicked()));
 }
 
 bool UIAuthentification::getInputs (QString &login, QString &password)
