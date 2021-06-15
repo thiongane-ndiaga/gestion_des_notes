@@ -71,7 +71,7 @@ color: rgb(255, 255, 255);</string>
      <rect>
       <x>249</x>
       <y>-1</y>
-      <width>231</width>
+      <width>281</width>
       <height>211</height>
      </rect>
     </property>
@@ -193,6 +193,12 @@ color: rgb(255, 255, 255);
          <property name="text">
           <string>Se connecter</string>
          </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -305,7 +311,7 @@ color: rgba(150, 2, 0, 1);
      <x>0</x>
      <y>0</y>
      <width>480</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
