@@ -204,3 +204,94 @@ FlowController::~FlowController()
         Service::release();
     }
 }
+
+
+/**
+ * @brief onUIResponsable buttons clicked
+ * définit les traitements à exécuter
+ * lorsqu'un événement se produit sur l'un des boutons
+ * de la fenêtre du responsable
+ */
+
+void FlowController::onUIResponsableValiderClicked()
+{
+
+}
+//void onUIResponsableModifierClicked();
+void FlowController::onUIResponsableListerClicked()
+{
+
+}
+void FlowController::onUIResponsableEffacerClicked()
+{
+
+}
+void FlowController::onUIResponsableSupprimerClicked()
+{
+
+}
+void FlowController::onUIResponsableExitClicked()
+{
+
+}
+void FlowController::onUIResponsableRechercherClicked()
+{
+
+}
+void FlowController::onUIResponsableProfilClicked()
+{
+
+}
+
+
+/**
+  @brief onUIFormateur buttons clicked
+ * définit les traitements à exécuter
+ * lorsqu'un événement se produit sur l'un des boutons
+ * de la fenêtre du formateur
+ */
+
+void FlowController::onUIFormateurValiderClicked()
+{
+
+}
+void FlowController::onUIFormateurListerClicked()
+{
+
+}
+void FlowController::onUIFormateurEffacerClicked()
+{
+
+}
+void FlowController::onUIFormateurSupprimerClicked()
+{
+
+}
+void FlowController::onUIFormateurExitClicked()
+{
+
+}
+void FlowController::onUIFormateurRechercherClicked()
+{
+
+}
+void FlowController::onUIFormateurProfilClicked()
+{
+
+}
+
+/**
+  @brief onUIEtudiant buttons clicked
+ * définit les traitements à exécuter
+ * lorsqu'un événement se produit sur l'un des boutons
+ * de la fenêtre de l'étudiant
+ */
+
+void FlowController::onUIEtudiantModifierClicked()
+{
+
+}
+void FlowController::onUIEtudiantListerClicked()
+{
+
+}
