@@ -329,9 +329,6 @@
               </property>
              </widget>
             </item>
-<<<<<<< HEAD
-            <item row="3" column="1">
-=======
             <item row="3" column="0">
              <widget class="QLabel" name="label_26">
               <property name="text">
@@ -367,7 +364,6 @@
              </widget>
             </item>
             <item row="5" column="1">
->>>>>>> f2eb7386aa04e6874cb9429dfe0bc7de5469cf22
              <widget class="QPushButton" name="pushButton_2">
               <property name="maximumSize">
                <size>
@@ -904,11 +900,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-<<<<<<< HEAD
-     <height>21</height>
-=======
      <height>26</height>
->>>>>>> f2eb7386aa04e6874cb9429dfe0bc7de5469cf22
     </rect>
    </property>
   </widget>
