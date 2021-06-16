@@ -47,7 +47,7 @@ UserModel* Service::listUsers(){
     return userModel;
 }
 
-bool Service::findUserBy(QString login){
+bool Service::doThisUserExists(QString login){
     UserModel userModel(DBAccess::getInstance());
     return userModel.readBy(login);
 }

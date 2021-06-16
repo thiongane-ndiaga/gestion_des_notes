@@ -192,7 +192,7 @@ bool UserModel::readBy(QString login, QString password, User *user)
     user->setType(query.value(record.indexOf("type")).toString());
     user->setIdentifiant(query.value(record.indexOf("identifiant")).toUInt());
 
-    qDebug() << "User with name" << user->getNom() << user->getPrenom() << "found.";
+    qDebug() << "User with name" << user->getNom() << user->getPrenom() << "with type >> "<< user->getType()<<"found.";
     dbAccess->close();
 
     return true;

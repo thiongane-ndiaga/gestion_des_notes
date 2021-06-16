@@ -100,10 +100,11 @@ void FlowController::onUIAdministrateurValiderClicked()
     QString prenom;
     QString nom;
     QString password;
+    QString confirmPassword;
     QString type;
     bool operation;
 
-    bool statut = this->uiAdministrateur->getInputs(&identifiant, login, prenom, nom, password, type, &operation);
+    bool statut = this->uiAdministrateur->getInputs(&identifiant, login, prenom, nom, password, confirmPassword, type, &operation, false);
     if (statut == true)
     {
          qDebug () << "Data recup successfully!";
@@ -111,24 +112,33 @@ void FlowController::onUIAdministrateurValiderClicked()
          user.setType(type);
         if (operation == true)
         {
-            if(service->findUserBy(login)){
+            if(service->doThisUserExists(login)){
                 this->uiAdministrateur->notificationError("Un utilisateur avec ce login existe déja !");
             }else{
-                // Creation
-                service->createUser(user);
+                if(password.compare(confirmPassword) != 0){
+                    this->uiAdministrateur->notificationError("Les deux mots de passe ne correspondent pas !");
+                } else {
+                    // Creation
+                    service->createUser(user);
 
-                this->uiAdministrateur->setTableView(service->listUsers());
-                // On vide les champs
-                this->uiAdministrateur->clearInputs();
+                    this->uiAdministrateur->setTableView(service->listUsers());
+                    // On vide les champs
+                    this->uiAdministrateur->clearInputs();
+                }
             }
 
         }
         else
         {
-            // Mise à jour ...
-            user.setIdentifiant(identifiant);
-            service->updateUser(user);
-            this->uiAdministrateur->setTableView(service->listUsers());
+            if(password.compare(confirmPassword) != 0){
+                this->uiAdministrateur->notificationError("Les deux mots de passe ne correspondent pas !");
+            } else {
+                // Mise à jour ...
+                user.setIdentifiant(identifiant);
+                service->updateUser(user);
+                this->uiAdministrateur->setTableView(service->listUsers());
+            }
+
         }
     }
 }

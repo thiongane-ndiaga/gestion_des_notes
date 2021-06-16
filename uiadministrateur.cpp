@@ -38,18 +38,33 @@ UIAdministrateur::UIAdministrateur(QObject *controller)
 }
 
 
-bool UIAdministrateur::getInputs(int* identifiant, QString &login, QString &prenom, QString &nom, QString &password, QString &type, bool* operation)
+bool UIAdministrateur::getInputs(int* identifiant, QString &login, QString &prenom, QString &nom, QString &password, QString &confirmPassword, QString &type, bool* operation, bool isProfile)
 {
-    if (ui->lineEditId->text().compare("") != 0)
-        *identifiant = ui->lineEditId->text().toInt();
+    if(isProfile){
+        if (ui->lineEditIdProfil->text().compare("") != 0)
+            *identifiant = ui->lineEditId->text().toInt();
 
-    login = ui->lineEditLogin->text();
-    prenom = ui->lineEditPrenom->text();
-    nom = ui->lineEditNom->text();
-    password = ui->lineEditPassword->text();
+        login = ui->lineEditLoginProfil->text();
+        prenom = ui->lineEditPrenomProfil->text();
+        nom = ui->lineEditNomProfil->text();
+        password = ui->lineEditPasswordProfil->text();
+        confirmPassword = ui->lineEditConfirmPasswordProfil->text();
+        type = "ADMINISTRATEUR";
+        *operation = false; // false si modification ...
 
-    type = ui->comboBoxRole->currentText();
-    *operation = ui->radioButtonCreate->isChecked(); // true si creation ...
+    }else{
+
+        if (ui->lineEditId->text().compare("") != 0)
+            *identifiant = ui->lineEditId->text().toInt();
+
+        login = ui->lineEditLogin->text();
+        prenom = ui->lineEditPrenom->text();
+        nom = ui->lineEditNom->text();
+        password = ui->lineEditPassword->text();
+        confirmPassword = ui->lineEditConfirmPassword->text();
+        type = ui->comboBoxRole->currentText();
+        *operation = ui->radioButtonCreate->isChecked(); // true si creation ...
+    }
 
     return true;
 }
