@@ -44,7 +44,7 @@ void FlowController::onUIAuthentificationLogInClicked()
                     // On affiche la fenêtre d'administration ...
                     uiAdministrateur = new UIAdministrateur(this);
                     uiAdministrateur->show();
-                    qDebug () << "Login : " << user.getLogin();
+                    // On affiche le profil
                     uiAdministrateur->setProfileInputs(user);
                     // On affiche les donnees sur le tableau
                     uiAdministrateur->setTableView(service->listUsers());
@@ -60,6 +60,7 @@ void FlowController::onUIAuthentificationLogInClicked()
                     // On affiche la fenêtre du formateur ...
                     uiFormateur = new UIFormateur(this);
                     uiFormateur->show();
+                    uiFormateur->setProfileInputs(user);
                     break;
 
                 case ETUDIANT:
@@ -187,8 +188,31 @@ void FlowController::onUIAdministrateurRechercherClicked()
     }
 }
 
-void FlowController::onUIAdministrateurProfilClicked()
+void FlowController::onUIAdministrateurModifierProfilClicked()
 {
+    int identifiant = -1;
+    QString login;
+    QString prenom;
+    QString nom;
+    QString password;
+    QString confirmPassword;
+    QString type;
+    bool operation;
+
+    bool statut = this->uiAdministrateur->getInputs(&identifiant, login, prenom, nom, password, confirmPassword, type, &operation, true);
+    if (statut == true){
+        qDebug () << "Je suis entrain de modifier !";
+        User user (nom, prenom, login, password);
+        user.setType(type);
+        if(password.compare(confirmPassword) != 0){
+            this->uiAdministrateur->notificationError("Les deux mots de passe ne correspondent pas !");
+        } else {
+            // Mise à jour ...
+            user.setIdentifiant(identifiant);
+            service->updateUser(user);
+            this->uiAdministrateur->setTableView(service->listUsers());
+        }
+    }
 }
 
 void FlowController::exec()

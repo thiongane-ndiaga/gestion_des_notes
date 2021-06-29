@@ -46,7 +46,7 @@ private slots:
     void onUIAdministrateurSupprimerClicked();
     void onUIAdministrateurExitClicked();
     void onUIAdministrateurRechercherClicked();
-    void onUIAdministrateurProfilClicked();
+    void onUIAdministrateurModifierProfilClicked();
 
     /**
      * @brief onUIResponsable buttons clicked

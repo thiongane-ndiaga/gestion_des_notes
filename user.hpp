@@ -31,6 +31,7 @@ public:
     QString getLogin() { return login; }
     QString getPassword() { return password; }
     TypeUser getType() ;
+    QString getTypeString() { return type; }
 
     void setIdentifiant(uint identifiant) { this->identifiant = identifiant; }
     void setNom(QString nom) { this->nom = nom; }

@@ -22,7 +22,7 @@ void UserModel::create(User user)
     query.bindValue(":prenom", user.getPrenom());
     query.bindValue(":login", user.getLogin());
     query.bindValue(":password", user.getPassword());
-    query.bindValue(":type", user.getType());
+    query.bindValue(":type", user.getTypeString());
     query.exec();
 
     readAll();
@@ -60,7 +60,7 @@ void UserModel::update(User user)
     query.bindValue(":prenom", user.getPrenom());
     query.bindValue(":login", user.getLogin());
     query.bindValue(":password", user.getPassword());
-    query.bindValue(":type", user.getType());
+    query.bindValue(":type", user.getTypeString());
     query.bindValue(":identifiant", user.getIdentifiant());
     query.exec();
 

@@ -35,6 +35,9 @@ UIAdministrateur::UIAdministrateur(QObject *controller)
     connect(ui->pushButtonQuitter, SIGNAL(clicked()),
             controller, SLOT(onUIAdministrateurExitClicked()));
 
+    connect(ui->pushButtonModifierProfil, SIGNAL(clicked()),
+            controller, SLOT(onUIAdministrateurModifierProfilClicked()));
+
 }
 
 
@@ -42,7 +45,7 @@ bool UIAdministrateur::getInputs(int* identifiant, QString &login, QString &pren
 {
     if(isProfile){
         if (ui->lineEditIdProfil->text().compare("") != 0)
-            *identifiant = ui->lineEditId->text().toInt();
+            *identifiant = ui->lineEditIdProfil->text().toInt();
 
         login = ui->lineEditLoginProfil->text();
         prenom = ui->lineEditPrenomProfil->text();
@@ -108,9 +111,9 @@ void UIAdministrateur::on_tableView_doubleClicked(const QModelIndex &index)
     int id = ui->tableView->model()->index(currentRow,0).data().toInt();
 
     ui->lineEditId->setText(QString::number(id));
-    ui->lineEditLogin->setText(ui->tableView->model()->index(currentRow,1).data().toString());
+    ui->lineEditNom->setText(ui->tableView->model()->index(currentRow,1).data().toString());
     ui->lineEditPrenom->setText(ui->tableView->model()->index(currentRow,2).data().toString());
-    ui->lineEditNom->setText(ui->tableView->model()->index(currentRow,3).data().toString());
+    ui->lineEditLogin->setText(ui->tableView->model()->index(currentRow,3).data().toString());
     ui->lineEditPassword->setText(ui->tableView->model()->index(currentRow,4).data().toString());
     ui->lineEditConfirmPassword->setText(ui->tableView->model()->index(currentRow,4).data().toString());
     ui->comboBoxRole->setCurrentIndex(ui->tableView->model()->index(currentRow,5).data().toInt());
